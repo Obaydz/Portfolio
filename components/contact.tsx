@@ -26,7 +26,7 @@ export default function Contact() {
       <p className="text-gray-700 dark:text-white/80 mt-[-0.5rem] sm:mt-0 text-lg">
         Reach out directly at{" "}
         <a
-          href="mailto:example@gmail.com"
+          href="mailto:oubeidallahzmander@gmail.com"
           className="text-purple-500 underline hover:text-purple-400 transition-colors"
         >
           oubeidallahzmander@gmail.com
