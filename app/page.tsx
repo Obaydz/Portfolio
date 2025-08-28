@@ -8,8 +8,8 @@ import { Analytics } from "@vercel/analytics/next"
 
 export default function Home() {
   return (
-    <Analytics/>
     <main className="flex flex-col items-center px-4">
+      <Analytics/>
       <Intro />
       <SectionDivider />
       <About />
