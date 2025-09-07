@@ -176,12 +176,13 @@ export default function IdentityCard() {
   const rotateX = useSpring(useTransform(y, [-150, 150], [10, -10]), { stiffness: 100 });
   const rotateY = useSpring(useTransform(x, [-250, 250], [-10, 10]), { stiffness: 100 });
 
-  function handleMouseMove(e) {
+  function handleMouseMove(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
     if (!cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
     x.set(e.clientX - rect.left - rect.width / 2);
     y.set(e.clientY - rect.top - rect.height / 2);
-  }
+}
+
 
   function handleMouseLeave() {
     x.set(0);
