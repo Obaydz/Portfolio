@@ -111,13 +111,6 @@ const CardFront: React.FC<{ data: CardData }> = ({ data }) => (
             </motion.a>
           ))}
         </div>
-        <a
-          href={data.cvUrl}
-          download
-          className="inline-flex items-center px-3 py-1.5 text-xs font-semibold bg-purple-600 hover:bg-purple-700 text-white rounded-lg shadow-md"
-        >
-          <Download size={14} className="mr-1.5" /> CV
-        </a>
       </div>
     </div>
 
@@ -168,7 +161,7 @@ const CardBack: React.FC<{ data: CardData }> = ({ data }) => (
 // ---- MAIN ----
 export default function IdentityCard() {
   const [isFlipped, setIsFlipped] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null); // ← type it properly
+  const cardRef = useRef(null);
 
   // Motion values for tilt
   const x = useMotionValue(0);
@@ -190,7 +183,8 @@ export default function IdentityCard() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+<div className="flex flex-col items-center justify-start p-0">
+
       <div
   className="perspective-1000 w-[90vw] h-[54vw] max-w-[500px] max-h-[300px] md:w-[500px] md:h-[300px]"
   onMouseMove={handleMouseMove}
@@ -222,8 +216,13 @@ export default function IdentityCard() {
       <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }} className="mt-8 text-purple-300 text-sm">
         Click on the card to see more.
       </motion.p>
+      <br></br>
+      <a
+          href="/Home"
+          className="inline-flex items-center px-3 py-1.5 text-l font-semibold bg-purple-600 hover:bg-purple-700 text-white rounded-lg shadow-md"
+        >
+          See Full Portfolio
+        </a>
     </div>
   );
 }
-
-
