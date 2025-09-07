@@ -168,7 +168,7 @@ const CardBack: React.FC<{ data: CardData }> = ({ data }) => (
 // ---- MAIN ----
 export default function IdentityCard() {
   const [isFlipped, setIsFlipped] = useState(false);
-  const cardRef = useRef(null);
+  const cardRef = useRef<HTMLDivElement>(null); // ← type it properly
 
   // Motion values for tilt
   const x = useMotionValue(0);
@@ -225,4 +225,5 @@ export default function IdentityCard() {
     </div>
   );
 }
+
 
