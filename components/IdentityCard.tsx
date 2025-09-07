@@ -31,16 +31,16 @@ const cardData: CardData = {
     { icon: Sparkles, text: "Since 2020" },
   ],
   socials: [
-    { icon: Github, link: "https://github.com/your-github" },
-    { icon: Linkedin, link: "https://linkedin.com/in/your-linkedin" },
-    { icon: Mail, link: "mailto:your-email@example.com" },
-    { icon: Globe, link: "https://your-portfolio.com" },
+    { icon: Github, link: "https://github.com/Obaydz" },
+    { icon: Linkedin, link: "https://www.linkedin.com/in/oubeidallah-zmander-945185306/" },
+    { icon: Mail, link: "mailto:oubeidallahzmander@gamil.com" },
+    { icon: Globe, link: "https://obayd.medal-team.com" },
   ],
   cvUrl: "/cv.pdf",
   qrCodeValue: "https://your-identity-hub.vercel.app",
   contactInfo: [
-    { label: "Email", value: "contact@example.com" },
-    { label: "Phone", value: "+123 456 789" },
+    { label: "Email", value: "oubeidallahzmander@gmail.com" },
+    { label: "Phone", value: "+216 24 301 793" },
     { label: "Availability", value: "Open to work" },
   ],
   skills: ["React", "Node.js", "Python", "AI/ML", "Next.js", "TailwindCSS", "Framer Motion"],
@@ -86,10 +86,10 @@ const CardFront: React.FC<{ data: CardData }> = ({ data }) => (
             key={i}
             variants={fadeUp}
             whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.2)" }}
-            className="bg-white/10 backdrop-blur-md rounded-md p-1.5 md:p-2 flex items-center gap-2"
+            className="bg-white/10 backdrop-blur-md rounded-md p-1.5 md:p-2 flex items-center gap-2 mb-1"
           >
             <item.icon size={14} className="text-purple-300 flex-shrink-0" />
-            <span className="truncate">{item.text}</span>
+            <span>{item.text}</span>
           </motion.div>
         ))}
       </motion.div>
@@ -140,16 +140,6 @@ const CardBack: React.FC<{ data: CardData }> = ({ data }) => (
             <span className="font-mono text-xs md:text-sm">{item.value}</span>
           </motion.div>
         ))}
-      </div>
-      <div className="w-full max-w-xs">
-        <h3 className="text-base md:text-lg font-semibold text-white mb-2">Primary Skills</h3>
-        <motion.div className="flex flex-wrap gap-1.5 justify-center">
-          {data.skills.map((skill) => (
-            <motion.span key={skill} variants={fadeUp} className="px-2.5 py-1 bg-purple-600 text-[10px] md:text-xs text-white rounded-full">
-              {skill}
-            </motion.span>
-          ))}
-        </motion.div>
       </div>
     </div>
     
