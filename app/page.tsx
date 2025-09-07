@@ -1,21 +1,12 @@
-import About from "@/components/about";
-import Contact from "@/components/contact";
-import Intro from "@/components/intro";
-import Projects from "@/components/projects";
-import SectionDivider from "@/components/section-divider";
-import Skills from "@/components/skills";
-import { Analytics } from "@vercel/analytics/next"
+import IdentityCard from "@/components/IdentityCard";
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="flex flex-col items-center px-4">
-      <Analytics/>
-      <Intro />
-      <SectionDivider />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
+    <main className="flex flex-col items-center min-h-screen p-4">
+      <br />
+      <br />
+      <br />
+      <IdentityCard />
     </main>
   );
 }
