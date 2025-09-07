@@ -64,5 +64,13 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+  function({ addUtilities }) {
+    addUtilities({
+      '.backface-hidden': {
+        'backface-visibility': 'hidden',
+      },
+    })
+  }
+],
 };
