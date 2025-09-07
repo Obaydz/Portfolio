@@ -6,6 +6,20 @@ import { Github, Linkedin, Mail, Globe, Download, ChevronLeft, ChevronRight, Map
 import { QRCode } from "react-qrcode-logo";
 
 // ---- DATA ----
+
+interface CardData {
+  name: string;
+  title: string;
+  avatarUrl: string;
+  bio: string;
+  details: { icon: React.ElementType; text: string }[];
+  socials: { icon: React.ElementType; link: string }[];
+  cvUrl: string;
+  qrCodeValue: string;
+  contactInfo: { label: string; value: string }[];
+  skills: string[];
+}
+
 const cardData = {
   name: "Obayd",
   title: "Full Stack Developer",
@@ -40,7 +54,7 @@ const fadeUp = {
 };
 
 // ---- FRONT ----
-const CardFront = ({ data }) => (
+const CardFront: React.FC<{ data: CardData }> = ({ data }) => (
   <motion.div
     className="absolute w-full h-full bg-gradient-to-br from-purple-800 to-gray-900 rounded-2xl shadow-2xl flex items-center justify-between p-6 overflow-hidden backface-hidden"
     initial="hidden"
@@ -116,7 +130,7 @@ const CardFront = ({ data }) => (
 );
 
 // ---- BACK ----
-const CardBack = ({ data }) => (
+const CardBack: React.FC<{ data: CardData }> = ({ data }) => (
   <motion.div
     className="absolute w-full h-full bg-gradient-to-br from-gray-900 to-purple-800 rounded-2xl shadow-2xl flex flex-col items-center justify-center p-6 overflow-hidden backface-hidden"
     style={{ transform: "rotateY(180deg)" }}
