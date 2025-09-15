@@ -22,6 +22,13 @@ const projectsData = [
     tags: ["Python", "Machine Learning", "NLP", "Chatbot"],
     imageUrl: "/ai.png",
   },
+  {
+    title: "FaaS App",
+    description:
+      "A serverless Function-as-a-Servise (FaaS) application built with node.js. It allows users to deploy and manage serverless functions with ease, leveraging cloud infrastructure for scalability and efficiency.",
+    tags: ["Python", "Node.js", "React", "FaaS"],
+    imageUrl: "/faas.png",
+  },
 ];
 
 type ProjectProps = (typeof projectsData)[number];
